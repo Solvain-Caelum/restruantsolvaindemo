@@ -169,7 +169,7 @@ function Membership() {
             {p.pop && <span className="absolute -top-3 left-8 rounded-full bg-primary px-3 py-1 text-xs font-bold uppercase text-primary-foreground">Most popular</span>}
             <h3 className="text-xl uppercase">{p.name}</h3>
             <p className="mt-5 flex items-end gap-1">
-              <span className="font-display text-5xl">£{p.price}</span>
+              <span className="font-display text-5xl">₹{p.price}</span>
               <span className="pb-1.5 text-muted-foreground">/month</span>
             </p>
             <ul className="mt-6 flex-1 space-y-3">
