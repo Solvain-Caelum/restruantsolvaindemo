@@ -11,7 +11,7 @@ export default defineConfig({
     base: "/restruantsolvaindemo/",
   },
   // Static output for GitHub Pages (no Cloudflare worker). Writes .output/public.
-  nitro: { preset: "static" },
+  nitro: { preset: "node-server" },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
