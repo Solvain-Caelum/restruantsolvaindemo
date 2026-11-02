@@ -13,3 +13,4 @@
 - Content pages use TanStack leaf routes and shared restaurant presentation components so navigation and page metadata stay consistent.
 - Reservation validation lives in a browser-safe pure module; submissions are transient demos with no persistence or external booking calls.
 - Use the shared shadcn Button and Calendar controls to keep interaction and accessibility consistent.
+- Build is a static GitHub Pages export: all public routes are prerendered into .output/public under router basepath /restruantsolvaindemo; new routes must be added to tanstackStart.pages in vite.config.ts. Why: Pages serves only static files.
