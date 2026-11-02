@@ -10,8 +10,9 @@ export default defineConfig({
   vite: {
     base: "/restruantsolvaindemo/",
   },
-  // Static output for GitHub Pages (no Cloudflare worker). Writes .output/public.
-  nitro: { preset: "node-server" },
+  // Static output for GitHub Pages: every page is prerendered into .output/public.
+  // The server bundle is only used at build time to prerender pages; only .output/public is deployed.
+  nitro: { output: { dir: ".output", publicDir: ".output/public", serverDir: ".output/server" } },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
