@@ -10,9 +10,21 @@ export default defineConfig({
   vite: {
     base: "/restruantsolvaindemo/",
   },
+  // Static output for GitHub Pages (no Cloudflare worker). Writes .output/public.
+  nitro: { preset: "static" },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
+    router: { basepath: "/restruantsolvaindemo" },
+    pages: [
+      { path: "/" },
+      { path: "/menu" },
+      { path: "/about" },
+      { path: "/gallery" },
+      { path: "/reserve" },
+      { path: "/contact" },
+    ],
+    prerender: { enabled: true, autoStaticPathsDiscovery: false, crawlLinks: false },
   },
 });
